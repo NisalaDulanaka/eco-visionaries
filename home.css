@@ -1,0 +1,108 @@
+.hero {
+  height: 100vh;
+  background-image: url(./assets/images/homePageImage.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .vr {
+  width: 2px;
+  background-color: white;
+  height: 16px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #ece2b1;
+  border-radius: 4px;
+  color: #000000;
+  box-shadow: none;
+  border: none;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: #14131394;
+  inset: 0;
+}
+
+.hero-content .background {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 46%;
+  height: 75%;
+  overflow: hidden;
+  border-top-left-radius: 6rem;
+}
+
+.hero-content .background img {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  transform: translate(-54%, -25%);
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  color: white;
+  padding-left: 30px;
+}
+
+.hero .carousel-item .slide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
+}
+
+.hero .slide .info {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.hero .slide .controls {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.hero .slide .controls button {
+  background-color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+.hero .carousel-wrapper .pagination {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  column-gap: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .hero-content .background {
+    display: block;
+  }
+
+  .hero .content {
+    width: 50%;
+    padding-top: 80px;
+    padding-left: 60px;
+  }
+}

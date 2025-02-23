@@ -1,0 +1,191 @@
+* {
+  font-family: "Plus Jakarta Sans", serif;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+  position: relative;
+}
+
+.section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo-container img.desktop {
+  display: none;
+  width: 240px;
+}
+
+.logo-container img.mobile {
+  width: 40px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+nav .content {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+nav .navigation {
+  display: none;
+  align-items: center;
+  margin-left: auto;
+  column-gap: 20px;
+  color: #d0d0d0;
+}
+
+nav .navigation .nav-links {
+  list-style-type: none;
+  column-gap: 25px;
+  display: flex;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.nav-links li:hover {
+  color: white;
+}
+
+nav .navigation-mobile {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 640px) {
+  nav .navigation {
+    display: flex;
+  }
+
+  nav .navigation-mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo-container img.desktop {
+    display: block;
+  }
+
+  .logo-container img.mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  nav .content {
+    padding: 10px 40px;
+  }
+
+  nav .navigation {
+    column-gap: 30px;
+  }
+
+  nav .navigation .nav-links {
+    column-gap: 35px;
+  }
+}
+
+.nav-links li.active {
+  color: white;
+  font-weight: normal;
+}
+
+.custom-footer {
+  background-color: #6b5b32;
+  color: white;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.custom-footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.custom-footer-section.logo {
+  flex: 2;
+}
+
+.custom-footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.custom-footer-section .logo-container img {
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.custom-footer-icons a {
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.custom-footer-icons a:hover {
+  color: #ddd;
+}
+
+.custom-footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.custom-footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-footer-section ul li {
+  margin: 5px 0;
+}
+
+.custom-footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.custom-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid white;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.custom-footer-links a {
+  margin: 0 10px;
+}
+
+.custom-footer-links a:hover {
+  text-decoration: underline;
+}
+
