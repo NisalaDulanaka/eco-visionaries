@@ -1,3 +1,5 @@
+/* This is the main css file */
+
 * {
   font-family: "Plus Jakarta Sans", serif;
   padding: 0;
@@ -18,11 +20,18 @@ a {
 main {
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 .section {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.vr {
+  width: 1px;
+  min-height: 25px;
+  background-color: #fff;
 }
 
 .logo-container img.desktop {
@@ -35,11 +44,20 @@ main {
 }
 
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   z-index: 5;
   width: 100%;
+  background-color: #000000;
+}
+
+nav.fixed {
+  position: fixed;
+  left: 0;
+}
+
+nav.transparent {
+  background-color: unset;
 }
 
 nav .content {
@@ -56,7 +74,7 @@ nav .navigation {
   color: #d0d0d0;
 }
 
-nav .navigation .nav-links {
+.nav-links {
   list-style-type: none;
   column-gap: 25px;
   display: flex;
@@ -70,6 +88,20 @@ nav .navigation .nav-links {
 
 nav .navigation-mobile {
   margin-left: auto;
+}
+
+nav .navigation-mobile button {
+  color: #fff;
+}
+
+.login-button {
+  padding: 10px 20px;
+  background-color: #ece2b1;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #000000;
+  box-shadow: none;
+  border: none;
 }
 
 @media screen and (min-width: 640px) {
@@ -111,6 +143,56 @@ nav .navigation-mobile {
   font-weight: normal;
 }
 
+/* Mobile navbar */
+.mobile-nav {
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 15px;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateX(300px);
+}
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 15px;
+  color: #fff;
+}
+
+.mobile-nav.open {
+  transform: translateX(0%);
+}
+
+.mobile-nav .nav-links {
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.mobile-nav li {
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.mobile-nav .register-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: #cbcbcb;
+  font-size: 14px;
+  text-align: center;
+  color: #121212;
+}
+
+
+/* Footer */
 .custom-footer {
   background-color: #6b5b32;
   color: white;
@@ -120,8 +202,10 @@ nav .navigation-mobile {
 
 .custom-footer-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   flex-wrap: wrap;
+  row-gap: 10px;
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 50px;
@@ -134,23 +218,57 @@ nav .navigation-mobile {
 
 .custom-footer-section {
   flex: 1;
-  min-width: 200px;
+  min-width: 100px;
   margin: 10px;
 }
 
 .custom-footer-section .logo-container img {
-  width: 350px;
+  width: 200px;
   margin-bottom: 10px;
 }
 
-.custom-footer-icons a {
-  margin-right: 10px;
-  font-size: 18px;
-  color: white;
+@media screen and (min-width: 640px) {
+  .custom-footer-container {
+    flex-direction: row;
+    row-gap: unset;
+  }
+
+  .custom-footer-section .logo-container img {
+    width: 250px;
+  }
+
+  .custom-footer-text {
+    max-width: 500px;
+  }
 }
 
-.custom-footer-icons a:hover {
-  color: #ddd;
+@media screen and (min-width: 1280px) {
+  .custom-footer-section {
+    min-width: 200px;
+  }
+
+  .custom-footer-section .logo-container img {
+    width: 350px;
+  }
+}
+
+.custom-footer-icons {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 15px;
+}
+
+.custom-footer-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4rem;
+  padding: 5px;
+  background-color: white;
+}
+
+.custom-footer-icons a img {
+  width: 16px;
 }
 
 .custom-footer-section h3 {
@@ -188,4 +306,3 @@ nav .navigation-mobile {
 .custom-footer-links a:hover {
   text-decoration: underline;
 }
-
