@@ -1,0 +1,78 @@
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px gray;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.fieldsetalign {
+    display: flex;
+    align-items: center;  
+    gap: 30px;
+    justify-content: center; 
+}
+
+.fieldsetalign div {
+    display: flex;
+    align-items: center;  
+    gap: 5px; 
+}
+
+
+.checkboxsize {
+    transform: scale(1.25); 
+    margin: 1; 
+    
+}
+
+.legendhead {
+ 
+  text-size-adjust:20px ;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.rating span {
+    font-size: 24px;
+    cursor: pointer;
+}

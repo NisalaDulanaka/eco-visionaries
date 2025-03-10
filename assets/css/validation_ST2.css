@@ -1,0 +1,32 @@
+.container section h2 {
+    margin-bottom: 15px;
+}
+
+.container section h3 {
+    margin-bottom: 8px;
+}
+
+.container section p {
+    margin-bottom: 20px;
+}
+
+.container aside {
+    padding: 20px 40px;
+}
+
+.container h3 {
+    margin-bottom: 20px;
+}
+
+.top-level-ul ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.top-level-ul>li {
+    margin-bottom: 15px;
+}
+
+.top-level-ul li a:hover, .container section p a:hover {
+    color: #0056b3;
+}

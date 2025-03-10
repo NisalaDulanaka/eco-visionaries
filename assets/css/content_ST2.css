@@ -1,0 +1,287 @@
+.article-hero {
+  background-image: url(../../assets/images/content-1.jpg);
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.article-hero .intro-section {
+  max-width: 1000px;
+  padding-top: 50px;
+  background-color: #fff;
+}
+
+.article-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.article-hero .intro-section .description {
+  padding: 0px 25px;
+}
+
+.icon-img {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+
+.icon-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.article-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0px;
+  padding-bottom: 80px;
+}
+
+.article-container .intro {
+  padding: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .article-hero {
+    height: 550px;
+  }
+
+  .article-hero .intro-section {
+    padding: 0px 60px;
+    padding-top: 50px;
+  }
+}
+
+.article-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.article-subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #0077b6;
+  display: flex;
+  align-items: center;
+}
+
+.article-section ul {
+  padding: 30px 20px;
+}
+
+/* Highlighted Callout Box */
+.callout-box {
+  background-color: #dff6ff;
+  padding: 15px;
+  border-left: 5px solid #0077b6;
+  margin: 20px 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 25px 20px;
+}
+
+.stat-container .stat {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-container .stat .title {
+  font-weight: 600;
+}
+
+.stat-container .stat .value {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Table Styling */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.stats-table th,
+.stats-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.stats-table th {
+  background-color: #0077b6;
+  color: white;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  width: 100%;
+  min-height: 200px;
+  background-color: #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.gallery-view {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.gallery-view .view {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.gallery-view .view .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.gallery-view .view .description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-view .view {
+    margin-top: 30px;
+    flex-direction: row;
+  }
+
+  .gallery-view .view .image img {
+    width: 400px;
+  }
+
+  .gallery-view .view.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.climate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.climate-table th,
+.climate-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.climate-table th {
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+/* table stripes */
+.climate-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.climate-table tr:hover {
+  background-color: #cce7ff;
+  transition: 0.3s ease-in-out;
+}
+
+.climate-table tr:last-child td {
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .table-container {
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+  }
+
+.table-logo {
+  height: 20px;
+}
+
+.table-icon {
+  width: 40px;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.climate-table a:hover {
+  text-decoration: underline;
+}

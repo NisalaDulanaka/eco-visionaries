@@ -1,0 +1,311 @@
+/* Main color palette - matching with existing design */
+:root {
+    --primary-blue: #3D4F9F; /* Based on your navbar theme */
+    --primary-green: #2E8B57; /* For eco-themed elements */
+    --accent-orange: #FF8C42; /* For call-to-action buttons */
+    --light-gray: #F8F9FA; /* Light background */
+    --white: #FFFFFF; /* Card backgrounds */
+    --text-dark: #333333; /* For text */
+    --text-light: #666666; /* For secondary text */
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Card shadows */
+  }
+  
+  /* Volunteer content section */
+  .content-volunteer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-gray);
+    padding: 2rem 0;
+  }
+  
+  /* Programs container layout */
+  .programs-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .program-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-card-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-content h3 {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .card-content p {
+    margin: 0.5rem 0;
+    color: var(--text-light);
+  }
+  
+  .card-content li {
+    margin: 0.5rem 0;
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-light);
+  }
+  
+  .card-content li:before {
+    content: "🌱";
+    position: absolute;
+    left: 0;
+  }
+  
+  .card-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  
+  .view-btn, .apply-btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .view-btn {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+  }
+  
+  .view-btn:hover {
+    background-color: rgba(61, 79, 159, 0.1);
+  }
+  
+  .apply-btn {
+    background-color: var(--primary-blue);
+    color: white;
+  }
+  
+  .apply-btn:hover {
+    background-color: #304080;
+  }
+  
+  /* Reviews and Feedback section */
+  .reviews-feedback-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .reviews, .feedback {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+  
+  .reveiws-header {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  .review-card {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-blue);
+  }
+  
+  .review-card p {
+    margin: 0.5rem 0;
+    color: var(--text-light);
+  }
+  
+  .view-reviews {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .view-reviews:hover {
+    background-color: rgba(61, 79, 159, 0.1);
+  }
+  
+  .feedback h3 {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    resize: none;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+  }
+  
+  .feedback-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  
+  .submit-fb, .cancel-fb {
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.9rem;
+  }
+  
+  .submit-fb {
+    background-color: var(--primary-blue);
+    color: white;
+  }
+  
+  .submit-fb:hover {
+    background-color: #304080;
+  }
+  
+  .cancel-fb {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid #ddd;
+  }
+  
+  .cancel-fb:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Program Section Header */
+  .programs-header {
+    text-align: center;
+    margin: 1rem 0 2rem;
+    padding: 0 1.5rem;
+  }
+  
+  .programs-header h2 {
+    color: var(--primary-blue);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .programs-header p {
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Impact Stats Section */
+  .impact-section {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 2.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .impact-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .stat-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 180px;
+  }
+  
+  .stat-number {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .programs-container, 
+    .reviews-feedback-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-btns {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    .view-btn, .apply-btn {
+      width: 100%;
+    }
+    
+    .stats-container {
+      gap: 1rem;
+    }
+    
+    .stat-card {
+      width: 140px;
+      padding: 1rem;
+    }
+  }

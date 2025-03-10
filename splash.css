@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: url(https://th.bing.com/th/id/R.3c4b078af7284e4f772eb1daea326199?rik=sr3yGjcKbPpHDQ&riu=http%3a%2f%2fi.kinja-img.com%2fgawker-media%2fimage%2fupload%2fs--v5kG3dwI--%2fis9l7titozic2s3xpqjk.gif&ehk=An5KlNH%2b2Np1Ui0OonpguuPdRCKIKOoCLQhoW%2bSxEWA%3d&risl=1&pid=ImgRaw&r=0);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: slideIn 1.2s ease-in-out 0.3s forwards;
+}
+
+.leaf {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    opacity: 0;
+    animation: growLeaf 1.5s ease-in-out 0.5s forwards;
+}
+
+.tagline {
+    font-size: 22px;
+    margin-bottom: 40px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.earth-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.8s forwards;
+}
+
+.earth {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(46, 204, 113, 0.4);
+    animation: rotate 15s linear infinite;
+}
+
+.earth::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><path fill="%232ecc71" d="M10,20 C20,60 30,30 40,70 C50,40 60,80 70,50 C80,70 90,40 100,90 C110,50 120,70 130,40 C140,60 150,30 160,80 C170,50 180,70 190,30 z" opacity="0.4"/><path fill="%233498db" d="M0,70 C20,40 40,100 60,60 C80,80 100,30 120,70 C140,50 160,90 180,50 C200,70 220,40 240,80 z" opacity="0.3"/></svg>');
+    animation: clouds 20s linear infinite;
+}
+
+.loader {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 40px;
+    position: relative;
+    max-width: 300px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.2s forwards;
+}
+
+.loader-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #2ecc71;
+    border-radius: 4px;
+    animation: loading 4s linear forwards;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.4s forwards;
+}
+
+.team-members {
+    margin-top: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.6s forwards;
+}
+
+.team-members h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #2ecc71;
+}
+
+.team-members ul {
+    list-style: none;
+    padding: 0;
+}
+
+.team-members li {
+    font-size: 16px;
+    margin: 5px 0;
+    opacity: 0;
+    animation: memberSlideIn 0.8s ease-in-out forwards;
+}
+
+.team-members li:nth-child(1) {
+    animation-delay: 1.8s;
+}
+
+.team-members li:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.team-members li:nth-child(3) {
+    animation-delay: 2.2s;
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1a1a1a, #3a3a3a);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(46, 204, 113, 0.6);
+    border-radius: 50%;
+    animation: float 20s linear infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes memberSlideIn {
+    from { 
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes growLeaf {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes clouds {
+    from { transform: translateX(0) translateY(0); }
+    to { transform: translateX(-50%) translateY(-20%); }
+}
+
+@keyframes loading {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(100vw);
+        opacity: 0;
+    }
+}
