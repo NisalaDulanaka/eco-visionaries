@@ -1,0 +1,90 @@
+body {
+    background: url('../assets/images/teampagebg.jpg') no-repeat center center/cover;
+    text-align: center;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.logo {
+    width: 200px;
+    display: block;
+    margin: 20px auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.team {
+    padding: 100px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   
+    background: rgba(60, 59, 59, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-member:hover .overlay {
+ opacity: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    -webkit-text-fill-color:rgb(91, 23, 23);
+    
+    font-weight: bold;
+}
+
+h2{
+    -webkit-text-fill-color: aliceblue;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+}

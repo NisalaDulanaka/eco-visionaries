@@ -1,0 +1,20 @@
+.page-block {
+    background-color: whitesmoke;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.page-name {
+    color: #766c42;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d3c9a3;
+}
+
+.page-img {
+    width: 80%;
+    height: auto;
+}

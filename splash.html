@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="4; url=home.html">
+    <title>EcoVisionaries - Working for a Sustainable Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="splash.css"/>
+</head>
+<body>
+    <div class="splash-container">
+        <div class="logo-container">
+            <img src="/assets/images/logo.png"/>
+        </div>
+        
+        <h1 class="tagline">Building a sustainable future together</h1>
+        
+        <div class="earth-container">
+            <div class="earth"></div>
+        </div>
+        
+        <div class="team-members">
+            <h3>Group Members</h3>
+            <ul>
+                <li>Rashini Jayasinghe</li>
+                <li>Nisala Dulanka</li>
+                <li>Dinetha Sahan</li>
+            </ul>
+        </div>
+        
+        <div class="loader">
+            <div class="loader-bar"></div>
+        </div>
+        
+        <div class="message">Loading, please wait...</div>
+        
+        <div class="background-animation"></div>
+        
+        <!-- Particles -->
+        <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="top: 80%; left: 30%; animation-delay: 1s;"></div>
+        <div class="particle" style="top: 40%; left: 70%; animation-delay: 2s;"></div>
+        <div class="particle" style="top: 10%; left: 90%; animation-delay: 3s;"></div>
+        <div class="particle" style="top: 60%; left: 40%; animation-delay: 4s;"></div>
+        <div class="particle" style="top: 30%; left: 60%; animation-delay: 5s;"></div>
+        <div class="particle" style="top: 70%; left: 20%; animation-delay: 6s;"></div>
+        <div class="particle" style="top: 50%; left: 50%; animation-delay: 7s;"></div>
+    </div>
+    
+    <script>
+        // Redirect to landing page after 4 seconds
+        // setTimeout(function() {
+        //     window.location.href = "landing.html"; // Replace with your actual landing page URL
+        // }, 4000);
+        
+        // Create floating particles
+        function createParticles() {
+            const container = document.querySelector('.splash-container');
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random positioning
+                const top = Math.random() * 100;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 10;
+                const size = 2 + Math.random() * 4;
+                
+                particle.style.top = `${top}%`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // Run particle creation
+        createParticles();
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header and Navbar */
+.header-container {
+    background: #f8f9fa;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-bar .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-container img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.register-button {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.login-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+.navigation-mobile {
+    display: none;
+}
+
+/* Main Content */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main {
+    width: 70%;
+}
+
+aside {
+    width: 25%;
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.top-level-ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+    text-align: left;
+}
+
+.top-level-ul ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+.custom-footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.custom-footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.custom-footer-icons img {
+    width: 25px;
+    margin: 5px;
+}
+
+.custom-footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Images Visibility */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}

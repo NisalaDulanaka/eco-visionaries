@@ -18,7 +18,7 @@ nav.scrolled::after {
 
 .hero {
   height: 100vh;
-  background-image: url(../assets/images/homePageImage.png);
+  background-image: url(../images/homePageImage.png);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -163,7 +163,7 @@ nav.scrolled::after {
 
 /* support section */
 .support-banner {
-  background: url(../assets/images/support-banner.png);
+  background: url(../images/support-banner.png);
   background-size: cover;
   background-position: 70%;
   padding: 56px 40px;
@@ -357,7 +357,7 @@ nav.scrolled::after {
   overflow: hidden;
 }
 
-.content-card button {
+.content-card a {
   margin-top: 30px;
   background-color: #fff;
   display: flex;
@@ -366,6 +366,8 @@ nav.scrolled::after {
   border-radius: 4rem;
   padding: 10px 15px;
   font-weight: 500;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .content-card button span {
